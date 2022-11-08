@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Git Checkout') {
+    stage('Build') {
       steps
       {
-       checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/Avinaash08/helloworld.git']]])      
+       sh 'echo "Hello world"'
       }
     }
   }
