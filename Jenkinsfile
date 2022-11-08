@@ -8,7 +8,7 @@ pipeline {
       steps
       {
        sh "mvn clean package"
-       sh "mv target/*.war target/myweb.war" 
+       sh "mv target/*.jar target/myweb.war" 
       }
     }
     stage('Deploy') {
