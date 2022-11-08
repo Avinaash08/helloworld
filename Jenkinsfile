@@ -8,13 +8,13 @@ pipeline {
       steps
       {
        sh "mvn clean package"
-       sh "mv target/*.jar target/myweb.war" 
+       sh "mv target/*.jar target/myweb.jar" 
       }
     }
     stage('Deploy') {
       steps {
         sh '''
-        cp target/myweb.war /opt/tomcat/webapps
+        cp target/myweb.jar /opt/tomcat/webapps
         '''
       }
     }
