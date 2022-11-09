@@ -15,6 +15,7 @@ pipeline {
       steps {
         sh '''
         cp target/myweb.jar /opt/tomcat/webapps
+        ls /opt/tomcat/webapps/
         '''
       }
     }
